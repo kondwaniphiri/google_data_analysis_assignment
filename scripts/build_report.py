@@ -13,6 +13,7 @@ from PIL import Image
 
 ROOT=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
+parser.add_argument('--student-name',default='[Enter student name]')
 parser.add_argument('--student-number',default='[Enter NCC student number]')
 args=parser.parse_args()
 source=(ROOT/'report/report.md').read_text(encoding='utf-8')
@@ -63,7 +64,7 @@ doc.styles['Subtitle'].font.italic=False
 header=section.header.paragraphs[0]
 header.paragraph_format.line_spacing=1
 header.paragraph_format.space_after=Pt(0)
-run=header.add_run(f'Kondwani Phiri | NCC {args.student_number}\nWord count {word_count:,}')
+run=header.add_run(f'{args.student_name} | NCC {args.student_number}\nWord count {word_count:,}')
 run.font.size=Pt(9)
 footer=section.footer.paragraphs[0]
 footer.alignment=2
@@ -73,7 +74,7 @@ field=OxmlElement('w:fldSimple'); field.set(qn('w:instr'),'PAGE'); footer._p.app
 doc.add_paragraph('Google Local Review Analysis and Business Strategy','Title')
 doc.add_paragraph('Introduction to Data Science and Big Data','Subtitle')
 doc.add_paragraph('Google Local Research Team\nAutumn 2024 to Summer 2025')
-doc.add_paragraph(f'Name: Kondwani Phiri\nNCC Education student number: {args.student_number}\nReport word count: {word_count:,}')
+doc.add_paragraph(f'Name: {args.student_name}\nNCC Education student number: {args.student_number}\nReport word count: {word_count:,}')
 doc.add_paragraph('The report is within the permitted word limit of 4,400 words. The count includes report headings and figure captions, and excludes the cover, reference list and text within figures.')
 doc.add_page_break()
 for line in source.splitlines():
@@ -99,7 +100,7 @@ for index,(stem,caption) in enumerate(figures):
     p.paragraph_format.line_spacing=1
     p.add_run().add_picture(str(image),width=Inches(image_width))
 doc.core_properties.title='Google Local Review Analysis and Business Strategy'
-doc.core_properties.author='Kondwani Phiri'
+doc.core_properties.author='' if args.student_name.startswith('[') else args.student_name
 doc.core_properties.subject='NCC Education Google Local assignment Tasks 1 to 4'
 destination=ROOT/'report/Google_Local_Analysis_Report.docx'
 doc.save(destination)

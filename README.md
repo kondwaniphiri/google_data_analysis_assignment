@@ -9,7 +9,7 @@ Corrected implementation of NCC Education's **Introduction to Data Science and B
 - [Analysis program](analysis.py), [aggregate CSV results](outputs/), and [browser screenshots](evidence/).
 - [Report source](report/report.md), build scripts, dependency versions, and validation tests.
 
-**Before academic submission:** replace `[Enter NCC student number]` in the report using your actual NCC number, review the work and acknowledge assistance under your institution's rules, and attach the required Statement and Confirmation of Own Work. No declaration has been signed on your behalf.
+**Before academic submission:** fill in the actual course student's name and NCC number, review the work and acknowledge assistance under the institution's rules, and attach the required Statement and Confirmation of Own Work. The repository owner is not assumed to be the course student. No declaration has been signed on the student's behalf.
 
 ## Main findings
 
@@ -52,7 +52,7 @@ The screenshot script requires Node.js, Playwright and Chrome. Install Playwrigh
 
 ```powershell
 node scripts/capture_evidence.cjs
-python scripts/build_report.py --student-number YOUR_NCC_NUMBER
+python scripts/build_report.py --student-name "STUDENT NAME" --student-number STUDENT_NCC_NUMBER
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/export_report.ps1
 ```
 
