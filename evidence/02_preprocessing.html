@@ -1,0 +1,89 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{font:17px Arial,sans-serif;color:#182434;background:#fff;margin:24px;max-width:860px}h1{font-size:29px;margin:0 0 12px}h2{font-size:21px;margin:26px 0 10px}p{line-height:1.6;color:#34465b}table{border-collapse:collapse;width:100%;font-size:17px}th,td{padding:7px 10px;border:1px solid #d9dfe6;text-align:left}th{background:#eaf0f5}tr:nth-child(even){background:#f7f9fb}footer{font-size:13px;color:#566479;margin-top:24px}</style></head><body><h1>Task 1 Cleaning evidence</h1><p>Actual spelling replacements from the full run. Corrections are stored separately; VADER uses original text.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>original</th>
+      <th>replacement</th>
+      <th>occurrences</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>recomend</td>
+      <td>recommend</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <td>definately</td>
+      <td>definitely</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>recieved</td>
+      <td>received</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <td>recieve</td>
+      <td>receive</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>awsome</td>
+      <td>awesome</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>pleasent</td>
+      <td>pleasant</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>experiance</td>
+      <td>experience</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>resturant</td>
+      <td>restaurant</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>thier</td>
+      <td>their</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table><h2>Actual contraction and tokenization examples</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>stage</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Original text</td>
+      <td>It's all about Tuesdays and Thursdays- $1 tacos and 35 cent wings!</td>
+    </tr>
+    <tr>
+      <td>Expanded text</td>
+      <td>it is all about Tuesdays and Thursdays- $1 tacos and 35 cent wings!</td>
+    </tr>
+    <tr>
+      <td>Word tokens</td>
+      <td>['it', 'is', 'all', 'about', 'Tuesdays', 'and', 'Thursdays-', '$', '1', 'tacos', 'and', '35', 'cent', 'wings', '!']</td>
+    </tr>
+    <tr>
+      <td>Original text</td>
+      <td>Best fried rice I've ever had! Love the sesame chicken as well. Quick take out!</td>
+    </tr>
+    <tr>
+      <td>Expanded text</td>
+      <td>Best fried rice I have ever had! Love the sesame chicken as well. Quick take out!</td>
+    </tr>
+    <tr>
+      <td>Word tokens</td>
+      <td>['Best', 'fried', 'rice', 'I', 'have', 'ever', 'had', '!', 'Love', 'the', 'sesame', 'chicken', 'as', 'well.', 'Quick', 'take', 'out', '!']</td>
+    </tr>
+  </tbody>
+</table><p>Tokenizer: TreebankWordTokenizer. Full transformed text retained locally.</p><footer>Google Local Research Team | Evidence generated from outputs of analysis.py | Source files unchanged</footer></body></html>

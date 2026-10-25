@@ -1,0 +1,44 @@
+{
+  "datasets": [
+    {
+      "dataset": "Places",
+      "rows": 22476,
+      "columns": 7,
+      "exact_duplicates": 0,
+      "missing_cells": 25025
+    },
+    {
+      "dataset": "Reviews",
+      "rows": 21767,
+      "columns": 7,
+      "exact_duplicates": 0,
+      "missing_cells": 4301
+    },
+    {
+      "dataset": "Users",
+      "rows": 21858,
+      "columns": 6,
+      "exact_duplicates": 0,
+      "missing_cells": 30067
+    }
+  ],
+  "reviews_without_place": 14622,
+  "reviews_without_user": 0,
+  "invalid_dates": 0,
+  "reviews_with_text": 17706,
+  "reviews_without_text": 4061,
+  "it_specialists": 5,
+  "places_over_three": 4,
+  "five_star_text_reviews": 11114,
+  "spelling_replacements": 104,
+  "distinct_spelling_changes": 9,
+  "expanded_reviews": 5251,
+  "rating_agreement_percent": 77.93,
+  "places_with_at_least_ten_text_reviews": 0,
+  "runtime_seconds": 16.22,
+  "source_sha256": {
+    "Place.csv": "204d8552677314eac215898d69378421b887eac27735f6e5a7e0cf6b62d1cfd3",
+    "reviews.csv": "528508afee508e2584f3c838cddce79e3c8def60912fa3cdd3013450ef00297b",
+    "users.csv": "8d4d8a7c0d19c87230808cf22234732b0153501bb95ad609a1d51f3d518aa9e9"
+  }
+}

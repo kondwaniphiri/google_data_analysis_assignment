@@ -1,0 +1,2 @@
+3905 words
+Includes report headings and figure captions. Excludes cover, references and text within screenshots.

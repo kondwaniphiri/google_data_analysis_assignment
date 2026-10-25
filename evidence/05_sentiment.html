@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><style>body{font:17px Arial,sans-serif;color:#182434;background:#fff;margin:24px;max-width:860px}h1{font-size:29px;margin:0 0 12px}h2{font-size:21px;margin:26px 0 10px}p{line-height:1.6;color:#34465b}table{border-collapse:collapse;width:100%;font-size:17px}th,td{padding:7px 10px;border:1px solid #d9dfe6;text-align:left}th{background:#eaf0f5}tr:nth-child(even){background:#f7f9fb}footer{font-size:13px;color:#566479;margin-top:24px}</style></head><body><h1>Task 3 Sentiment analysis</h1><p>VADER applied to 17,706 original review texts.<br>Positive compound >= 0.05 | Negative compound <= -0.05 | Neutral between thresholds</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sentiment</th>
+      <th>reviews</th>
+      <th>percentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Positive</td>
+      <td>13498</td>
+      <td>76.23</td>
+    </tr>
+    <tr>
+      <td>Neutral</td>
+      <td>1995</td>
+      <td>11.27</td>
+    </tr>
+    <tr>
+      <td>Negative</td>
+      <td>2213</td>
+      <td>12.5</td>
+    </tr>
+  </tbody>
+</table><img width="850" src="../outputs/sentiment_distribution.png"><h2>Rating baseline compared with VADER</h2><p>Rows: rating sentiment. Columns: VADER sentiment. Agreement is a proxy, not verified accuracy.</p><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>ratingSentiment</th>
+      <th>Positive</th>
+      <th>Neutral</th>
+      <th>Negative</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Positive</td>
+      <td>12064</td>
+      <td>1373</td>
+      <td>490</td>
+    </tr>
+    <tr>
+      <td>Neutral</td>
+      <td>674</td>
+      <td>314</td>
+      <td>302</td>
+    </tr>
+    <tr>
+      <td>Negative</td>
+      <td>760</td>
+      <td>308</td>
+      <td>1421</td>
+    </tr>
+  </tbody>
+</table><p>Agreement: 77.93%</p><footer>Google Local Research Team | Evidence generated from outputs of analysis.py | Source files unchanged</footer></body></html>

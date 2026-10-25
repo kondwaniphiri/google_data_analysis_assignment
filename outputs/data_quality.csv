@@ -1,0 +1,4 @@
+dataset,rows,columns,exact_duplicates,missing_cells
+Places,22476,7,0,25025
+Reviews,21767,7,0,4301
+Users,21858,6,0,30067

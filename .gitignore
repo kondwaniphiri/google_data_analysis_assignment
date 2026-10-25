@@ -1,0 +1,9 @@
+.venv/
+.cache/
+__pycache__/
+.ipynb_checkpoints/
+~$*
+tmp/
+data/processed/
+outputs/private/
+*.log
