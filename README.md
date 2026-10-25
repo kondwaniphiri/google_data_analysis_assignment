@@ -7,6 +7,7 @@ Corrected implementation of NCC Education's **Introduction to Data Science and B
 - [Word report](report/Google_Local_Analysis_Report.docx) and [PDF report](report/Google_Local_Analysis_Report.pdf), with evidence screenshots and references.
 - [Executed notebook](google_local_analysis.ipynb), covering preparation, all five processing questions, and sentiment analysis.
 - [Analysis program](analysis.py), [aggregate CSV results](outputs/), and [browser screenshots](evidence/).
+- [Nine Jupyter Notebook screenshots](evidence/jupyter/) showing executed code inputs and their results in the actual Jupyter interface.
 - [Report source](report/report.md), build scripts, dependency versions, and validation tests.
 
 **Before academic submission:** fill in the actual course student's name and NCC number, review the work and acknowledge assistance under the institution's rules, and attach the required Statement and Confirmation of Own Work. The repository owner is not assumed to be the course student. No declaration has been signed on the student's behalf.
@@ -59,6 +60,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/export_report.ps1
 `build_report.py` requires python-docx and Pillow. The Word export script requires Microsoft Word on Windows; it opens only the generated report, read-only, and exports PDF. The report has double-spaced body text and name, student-number and word-count fields in every page header. The word count includes body headings and figure captions, excluding the cover, references and text inside figures.
 
 `scripts/build_evidence.py` regenerates HTML evidence pages and executes the notebook. `scripts/capture_evidence.cjs` captures those actual pages in Chrome. The screenshots are result evidence pages, not images of an IDE or simulated program execution. The notebook separately preserves executed code outputs.
+
+The additional images in `evidence/jupyter/` are captured from **Jupyter Notebook itself** after running all cells. They show the Jupyter toolbar, execution numbers, Python inputs and actual outputs for preparation, all five Task 2 queries, sentiment counts, and the rating comparison/chart. `scripts/capture_jupyter.cjs` reproduces them against a local Jupyter server configured in the ignored `tmp/jupyter/server.json`; it reads the local authentication token without publishing it. Use `--no-run` only to recapture an already executed notebook.
+
+To reproduce the Jupyter screenshots, run `python scripts/start_jupyter.py` in one terminal, then `node scripts/capture_jupyter.cjs` in another terminal with Playwright available. The starter generates a random local token and binds the server to `127.0.0.1` only. Stop it with Ctrl+C after capture.
 
 ## Corrections from the original submission
 
